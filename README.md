@@ -13,3 +13,10 @@ The playlists could be created by the user or shared by her/his virtual "friends
 
 The system will use several music-related knowledge models (e.g., [Music Ontology](http://musicontology.com/) or [MusicRecording](https://schema.org/MusicRecording) concept from schema.org) and available public resources: [Discogs](https://www.discogs.com/developers/), [MusicBrainz](https://musicbrainz.org/doc/MusicBrainz_API), [Musicmoz Music Styles](https://vocabularyserver.com/music/).
 
+## Design and arhitecture
+
+* Arhitecture of the web application:
+* OpenAPI specification regarding the REST API:
+* Technical report: 
+* Project progress:
+
