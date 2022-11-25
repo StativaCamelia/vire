@@ -39,23 +39,32 @@
           <div class="card text-bg-light mb-3">
             <div class="card-body">
               <h2 class="card-title">1. Project description</h2>
-              Build a (micro-)service Web system able to "intelligently" recommend – by exposing a SPARQL endpoint –
-              vinyl music
-              records according to various criteria: user preferences (specified via controlled natural language
-              constructs such as
-              "I always like/love/prefer classical music, especially opera music by Rossini or Verdi and performed by
-              Angela Gheorghiu or
-              Juan Diego Flórez; I sometimes like progressive rock and post-rock; I like only metal albums released
-              before 2000;
-              I always dislike/hate rap and hip-hop; I dislike songs produced by Flood in the last 25 years"),
-              past song purchases on various music stores, playlists – available online via music streaming services:
-              Last.fm and
-              alternative solutions – and/or locally – for instance, by uploading a JSPF/XSPF document.
-              The playlists could be created by the user or shared by her/his virtual "friends" (consider at least one
-              social network).
-              The system will use several music-related knowledge models (e.g., Music Ontology or MusicRecording concept
-              from schema.org)
-              and available public resources: Discogs, MusicBrainz, Musicmoz Music Styles.
+              <blockquote>
+                <p>
+                  Build a (micro-)service Web system able to "intelligently" recommend – by exposing a SPARQL endpoint –
+                  vinyl music
+                  records according to various criteria: user preferences (specified via controlled natural language
+                  constructs such as
+                  "I always like/love/prefer classical music, especially opera music by Rossini or Verdi and performed
+                  by
+                  Angela Gheorghiu or
+                  Juan Diego Flórez; I sometimes like progressive rock and post-rock; I like only metal albums released
+                  before 2000;
+                  I always dislike/hate rap and hip-hop; I dislike songs produced by Flood in the last 25 years"),
+                  past song purchases on various music stores, playlists – available online via music streaming
+                  services:
+                  Last.fm and
+                  alternative solutions – and/or locally – for instance, by uploading a JSPF/XSPF document.
+                  The playlists could be created by the user or shared by her/his virtual "friends" (consider at least
+                  one
+                  social network).
+                  The system will use several music-related knowledge models (e.g., Music Ontology or MusicRecording
+                  concept
+                  from schema.org)
+                  and available public resources: Discogs, MusicBrainz, Musicmoz Music Styles.
+                </p>
+              </blockquote>
+
             </div>
           </div>
         </section>
@@ -67,9 +76,9 @@
           <div class="card text-bg-light mb-3">
             <div class="card-body">
               <h2 class="card-title">2. Architecture of the Web application</h2>
-
-              <p>High Level Arhitecture from first draft to final version</p>
-
+              <blockquote>
+                <p>High Level Arhitecture from first draft to final version</p>
+              </blockquote>
               <div id="myCarousel" class="carousel carousel-dark slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -197,19 +206,24 @@
               <h2 class="card-title">4. Final Users</h2>
 
               <h3 class="card-title">User Description</h3>
-              <p>An end user is a person who uses a product or service. This individual isn't necessarily the one who
-                purchases a product but the one who ultimately uses it.
-                For our application we have two main end users: </p>
-              <ol>
-                <li>A person that shows interest in music and wants to discover more and more music similar to his taste
-                </li>
-                <li>Developer that wants to integrate a music recommandation component in his application</li>
-              </ol>
+              <blockquote>
+                <p>An end user is a person who uses a product or service. This individual isn't necessarily the one who
+                  purchases a product but the one who ultimately uses it.
+                  For our application we have two main end users: </p>
+                <ol>
+                  <li>A person that shows interest in music and wants to discover more and more music similar to his
+                    taste
+                  </li>
+                  <li>Developer that wants to integrate a music recommandation component in his application</li>
+                </ol>
+              </blockquote>
 
               <h3 class="card-title">Use Case Diagram</h3>
-              <p>How the user will interact with the application:</p>
+              <blockquote>
+                <p>How the user will interact with the application:</p>
 
-              <img class="img-fluid" src="./use-case.png" alt="Use case diagram">
+                <img class="img-fluid" src="./use-case.png" alt="Use case diagram">
+              </blockquote>
             </div>
           </div>
         </section>
@@ -223,13 +237,19 @@
               <h2 class="card-title">5. REST and GraphQL API for our services</h2>
 
               <h3 class="card-title">User API</h3>
-              <p>link o the openAPI definition? </p>
+              <blockquote>
+                <p>link o the openAPI definition? </p>
+              </blockquote>
 
               <h3 class="card-title">Playlist API</h3>
-              <p>link o the openAPI definition? </p>
+              <blockquote>
+                <p>link o the openAPI definition? </p>
+              </blockquote>
 
               <h3 class="card-title">Recommandation API</h3>
-              <p>link o the openAPI definition? </p>
+              <blockquote>
+                <p>link o the openAPI definition? </p>
+              </blockquote>
             </div>
           </div>
         </section>
@@ -241,6 +261,7 @@
           <div class="card text-bg-light mb-3">
             <div class="card-body">
               <h2 class="card-title">6. External Data Sources</h2>
+              <blockquote></blockquote>
             </div>
           </div>
         </section>
@@ -252,60 +273,136 @@
           <div class="card text-bg-light mb-3">
             <div class="card-body">
               <h2 class="card-title">7. Ontology and Vocabularies</h2>
-              <p>We'll make use of the following ontology and vocabularies in order to model our business case. Some of them are needed for the Music Ontology that we use.</p>
-              <ul>
-                <li><b>PREFIX schema</b>: https://schema.org/ </li>
-                <li><b>PREFIX rdf</b>: http://www.w3.org/1999/02/22-rdf-syntax-ns# </li>
-                <li><b>PREFIX rdfs</b>: http://www.w3.org/2000/01/rdf-schema# </li>
-                <li><b>PREFIX xsd</b>: http://www.w3.org/2001/XMLSchema# </li>
-                <li><b>PREFIX mo</b>: http://purl.org/ontology/mo/ </li>
-                <li><b>PREFIX dc</b>: http://purl.org/dc/elements/1.1/</li>
-                <li><b>PREFIX tl</b>: http://purl.org/NET/c4dm/timeline.owl#</li>
-                <li><b>PREFIX event</b>: http://purl.org/NET/c4dm/event.owl#</li>
-                <li><b>PREFIX foaf</b>: http://xmlns.com/foaf/0.1/</li>
-              </ul>
+              <blockquote>
+                <p>We'll make use of the following ontology and vocabularies in order to model our business case. Some
+                  of
+                  them are needed for the Music Ontology that we use.</p>
+                <ul>
+                  <li><b>PREFIX schema</b>: https://schema.org/ </li>
+                  <li><b>PREFIX rdf</b>: http://www.w3.org/1999/02/22-rdf-syntax-ns# </li>
+                  <li><b>PREFIX rdfs</b>: http://www.w3.org/2000/01/rdf-schema# </li>
+                  <li><b>PREFIX xsd</b>: http://www.w3.org/2001/XMLSchema# </li>
+                  <li><b>PREFIX mo</b>: http://purl.org/ontology/mo/ </li>
+                  <li><b>PREFIX dc</b>: http://purl.org/dc/elements/1.1/</li>
+                  <li><b>PREFIX tl</b>: http://purl.org/NET/c4dm/timeline.owl#</li>
+                  <li><b>PREFIX event</b>: http://purl.org/NET/c4dm/event.owl#</li>
+                  <li><b>PREFIX foaf</b>: http://xmlns.com/foaf/0.1/</li>
+                </ul>
+              </blockquote>
+
               <h3 class="card-title">Vinyl Resource graph</h3>
-              <ul>
-                <li><b>rdfs: subClassOf</b> defines a subclass of the class MusicRecording from schema.org</li>
-                <li><b>schema: byArtist</b> represent the artist that performed this album or recording</li>
-                <li><b>mo:Genre</b> an expressive style of music represented by any text or a reference to a DBPedia genre (such as http://dbpedia.org/resource/Baroque_music), allowing semantic web clients to access easily really detailed structured information about the genre you are refering to.</li>
-                <li><b>schema: member</b> Represents a member of the MusicGroup.</li>
-                <li><b>schema: givenName</b> Represetns the first name of a Person, more accurate of the artist</li>
-              </ul>
-              <img class="img-fluid" src="./vinyl-graph.png" alt="Vinyl Graph">
+              <blockquote>
+                <ul>
+                  <li><b>rdfs: subClassOf</b> defines a subclass of the class MusicRecording from schema.org</li>
+                  <li><b>schema: byArtist</b> represent the artist that performed this album or recording</li>
+                  <li><b>mo:Genre</b> an expressive style of music represented by any text or a reference to a DBPedia
+                    genre (such as http://dbpedia.org/resource/Baroque_music), allowing semantic web clients to access
+                    easily really detailed structured information about the genre you are refering to.</li>
+                  <li><b>schema: member</b> Represents a member of the MusicGroup.</li>
+                  <li><b>schema: givenName</b> Represetns the first name of a Person, more accurate of the artist</li>
+                </ul>
+                <img class="img-fluid" src="./vinyl-graph.png" alt="Vinyl Graph">
+              </blockquote>
             </div>
           </div>
         </section>
       </div>
 
-      <!-- 8. Accessing RDF Graph data using SPARQL -->
-      <div class="row mt-2">
-        <section typeof="sa:RDF">
-          <div class="card text-bg-light mb-3">
-            <div class="card-body">
-              <h2 class="card-title">8. Accessing RDF Graph data using SPARQL</h2>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <!-- 9. Linked Data principles -->
+      <!-- 8. Linked Data principles -->
       <div class="row mt-2">
         <section typeof="sa:LinkedDataPrinciples">
           <div class="card text-bg-light mb-3">
             <div class="card-body">
-              <h2 class="card-title">9. Linked Data Principles</h2>
+              <h2 class="card-title">8. Linked Data Principles</h2>
+              <blockquote>
+                <p>
+                  <b>Linked Data</b> refers to a set of recommended practices for publishing structured data on the Web.
+                  In order to contribute to an environment where
+                  information is easily accessible, data should first be made available in a standard format that can be
+                  reached and processed by Semantic Web tools. This
+                  is achieved by respecting the four principles of Linked Data:
+                <ul>
+                  <li>Use Uniform Resource Identifiers (URIs) as names for things</li>
+                  <li>Use HTTP URIs so that people can look up those names</li>
+                  <li>Provide information using Semantic Web technologies such as RDF, OWL, SPARQL etc.</li>
+                  <li>Include links to other URIs to make other data discoverable</li>
+                </ul>
+
+                <p>Vire will make use of a few of these principles in the following manners:</p>
+                <ul>
+                  <li>URIs will be properly used to name the pages which facilitates the search for named data</li>
+                  <li>The data used for our resources has been modeled using the <b>Music Ontology</b> and
+                    <b>Schema.org</b> vocabulary.
+                  </li>
+                  <li>Entries on the songs, vinyls and artists will be linked and will redirect the user to other
+                    sources of information so he can discover more about that resource.</li>
+                </ul>
+                </p>
+              </blockquote>
             </div>
           </div>
         </section>
       </div>
 
-      <!-- 10. Bibliography -->
+      <!-- 9. Bibliography -->
       <div class="row mt-2">
         <section typeof="sa:Bibliography">
           <div class="card text-bg-light mb-3">
             <div class="card-body">
-              <h2 class="card-title">10. Bibliography</h2>
+              <h2 class="card-title">9. Bibliography</h2>
+              <blockquote>
+                <ol>
+                  <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://www.w3.org/TR/sparql11-protocol/"
+                    property="schema:citation" id="sparql-proto">
+                    <cite property="schema:name">
+                      <a href="https://www.w3.org/TR/sparql11-protocol/">The SPARQL 1.1 Protocol</a>
+                    </cite>
+                  </li>
+
+                  <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://www.w3.org/RDF/"
+                    property="schema:citation" id="rdf">
+                    <cite property="schema:name">
+                      <a href="https://www.w3.org/RDF/">RDF (Resource Description Framework) standard model</a>
+                    </cite>
+                  </li>
+
+                  <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://schema.org/"
+                    property="schema:citation" id="schemaorg">
+                    <cite property="schema:name">
+                      <a href="https://schema.org/">The schema.org vocabulary</a>
+                    </cite>
+                  </li>
+
+                  <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://schema.org/"
+                    property="schema:citation" id="musicontology">
+                    <cite property="schema:name">
+                      <a href="http://musicontology.com/">Music Ontology</a>
+                    </cite>
+                  </li>
+
+                  <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://schema.org/"
+                    property="schema:citation" id="discogs">
+                    <cite property="schema:name">
+                      <a href="https://www.discogs.com/developers/">Discogs</a>
+                    </cite>
+                  </li>
+
+                  <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://schema.org/"
+                    property="schema:citation" id="lastfm">
+                    <cite property="schema:name">
+                      <a href="https://www.last.fm/api/playlists">LastFM</a>
+                    </cite>
+                  </li>
+
+                  <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://schema.org/"
+                    property="schema:citation" id="lastfm">
+                    <cite property="schema:name">
+                      <a href="https://xspf.org/">XSPF</a>
+                    </cite>
+                  </li>
+
+                </ol>
+              </blockquote>
             </div>
           </div>
         </section>
