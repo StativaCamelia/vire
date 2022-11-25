@@ -112,10 +112,85 @@
                   <span class="sr-only">Next</span>
                 </a>
               </div>
+              <h3 class="card-title">Database arhitecture</h3>
+
+                <div class="item">
+                  <img src="db.png" alt="database" style="width:100%;">
+                </div>
+
+                <div class="item">
+                  <pre>
+                    <code>
+
+                      Table vire.users {
+                        id int [pk, increment]
+                        first_name varchar
+                        last_name varchar
+                        country_code int
+                        email varchar
+                        password varchar
+                        created_at timestamp
+                        modified_at timestamp
+                      }
+
+                      Table vire.playlists {
+                        id int [pk, increment]
+                        owner_id int [ref: > vire.users.id]
+                        name varchar
+                        created_at timestamp
+                        modified_at timestamp
+                      }
+
+                      Table vire.playlists_users {
+                        playlist_id int [ref: > vire.playlists.id]
+                        user_id int [ref: > vire.users.id]
+                      }
+
+                      Table vire.songs {
+                        id int [pk, increment]
+                        singer varchar
+                        release_date timestamp
+                        genre varchar
+                      }
+
+                      Table vire.playlists_songs {
+                        playlist_id int [ref: > vire.playlists.id]
+                        song_id int [ref: > vire.songs.id]
+                      }
+
+                  </code>
+                </pre>
+              </div>
               <h3 class="card-title">Main Backend Modules</h3>
               <h3 class="card-title">Recommandation Module</h3>
               <h3 class="card-title">User Module</h3>
-              <h3 class="card-title">Playlist Module</h3>
+
+            <p>
+              This module role is to maintain the functionality needed for users like login, register etc.
+            </p>
+            <p>
+              The arhitecture of the service is the following:
+            </p>
+            <div class="item">
+              <img src="arhUserService.PNG" alt="userService" style="width:100%;">
+            </div>
+            <p>  
+              Open API: <a href="./user-service-swagger/index.html">Here</a>
+            </p>
+
+            <h3 class="card-title">Playlist Module</h3>
+            <p>
+              This module role is to maintain the functionality needed for playlists like create, edit etc.
+            </p>
+            <p>
+              The arhitecture of the service is the following:
+            </p>
+            <div class="item">
+              <img src="arhPlaylistService.PNG" alt="playlistService" style="width:100%;">
+            </div>
+            <p>
+              Open API: <a href="./playlist-service-swagger/index.html">Here</a>
+            </p>
             </div>
         </section>
       </div>
