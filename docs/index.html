@@ -2,204 +2,294 @@
 <html lang="en-GB">
 
 <head>
-    <title>VIRE Scholarly technical report</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>VIRE Scholarly technical report</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body prefix="schema: http://schema.org/ sa: https://ns.science.ai/">
-    <div class='container'>
-         <article typeof="schema:ScholarlyArticle">
-            <div class="text-center">
-                <h1>VIRE Technical Report!</h1>
+  <div class='container'>
+    <article typeof="schema:ScholarlyArticle">
+      <div class="text-center">
+        <h1>VIRE Technical Report!</h1>
+      </div>
+
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link">Rusu Iulian-Daniel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Simion Andra</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Stativa Camelia-Georgiana</a>
+        </li>
+      </ul>
+
+      <!-- 1. Project description -->
+      <div class="row mt-2">
+        <section typeof="sa:Description">
+          <div class="card text-bg-light mb-3">
+            <div class="card-body">
+              <h2 class="card-title">1. Project description</h2>
+              Build a (micro-)service Web system able to "intelligently" recommend – by exposing a SPARQL endpoint –
+              vinyl music
+              records according to various criteria: user preferences (specified via controlled natural language
+              constructs such as
+              "I always like/love/prefer classical music, especially opera music by Rossini or Verdi and performed by
+              Angela Gheorghiu or
+              Juan Diego Flórez; I sometimes like progressive rock and post-rock; I like only metal albums released
+              before 2000;
+              I always dislike/hate rap and hip-hop; I dislike songs produced by Flood in the last 25 years"),
+              past song purchases on various music stores, playlists – available online via music streaming services:
+              Last.fm and
+              alternative solutions – and/or locally – for instance, by uploading a JSPF/XSPF document.
+              The playlists could be created by the user or shared by her/his virtual "friends" (consider at least one
+              social network).
+              The system will use several music-related knowledge models (e.g., Music Ontology or MusicRecording concept
+              from schema.org)
+              and available public resources: Discogs, MusicBrainz, Musicmoz Music Styles.
             </div>
-             
-             <ul class="nav justify-content-center">
-                  <li class="nav-item">
-                    <a class="nav-link">Rusu Iulian-Daniel</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link">Simion Andra</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link">Stativa Camelia-Georgiana</a>
-                  </li>
-               </ul>
-             
-             
-              <div class="row mt-2">
-                <section typeof="sa:Description">
-                    <div class="card text-bg-light mb-3">
-                        <div class="card-body">
-                            <h2 class="card-title">Project description</h2>
-                           Build a (micro-)service Web system able to "intelligently" recommend – by exposing a SPARQL endpoint – vinyl music 
-                            records according to various criteria: user preferences (specified via controlled natural language constructs such as 
-                            "I always like/love/prefer classical music, especially opera music by Rossini or Verdi and performed by Angela Gheorghiu or 
-                            Juan Diego Flórez; I sometimes like progressive rock and post-rock; I like only metal albums released before 2000; 
-                            I always dislike/hate rap and hip-hop; I dislike songs produced by Flood in the last 25 years"), 
-                            past song purchases on various music stores, playlists – available online via music streaming services: Last.fm and 
-                            alternative solutions – and/or locally – for instance, by uploading a JSPF/XSPF document. 
-                            The playlists could be created by the user or shared by her/his virtual "friends" (consider at least one social network). 
-                            The system will use several music-related knowledge models (e.g., Music Ontology or MusicRecording concept from schema.org) 
-                            and available public resources: Discogs, MusicBrainz, Musicmoz Music Styles.
-                        </div>
-                    </div>
-                </section>
-            </div>
-             
-             <div class="row mt-2">
-                <section typeof="sa:Arhitecture">
-                    <div class="card text-bg-light mb-3">
-                        <div class="card-body">
-                            <h2 class="card-title">Architecture of the Web application</h2>
-                            
-                            <p>High Level Arhitecture from first draft to final version</p>
-                            
-                            <div id="myCarousel" class="carousel carousel-dark slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                              <li data-target="#myCarousel" data-slide-to="1"></li>
-                            </ol>
-    
-                            <div class="carousel-inner">
-                              <div class="item active">
-                                <img src="currentArh.png" alt="Current Arhitecture" style="width:100%;">
-                                   <div class="carousel-caption d-none d-md-block">
-                                    <h3>Current Arhitecture Page</h3>
-                                  </div>
-                              </div>
-
-                              <div class="item">
-                                <img src="firstArh.png" alt="First Arhitecture" style="width:100%;">
-                                   <div class="carousel-caption d-none d-md-block">
-                                    <h3>Draft Arhitecture Page</h3>
-                                  </div>
-                              </div>
- 
-                            </div>
-                            
-                            <!-- Left and right controls -->
-                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                              <span class="glyphicon glyphicon-chevron-left"></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                              <span class="glyphicon glyphicon-chevron-right"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                        <h3 class="card-title">Main Backend Modules</h3>
-                        <h3 class="card-title">Recommandation Module</h3>
-                        <h3 class="card-title">User Module</h3>
-                        <h3 class="card-title">Playlist Module</h3>
-                    </div>
-                </section>
-            </div>
-
-            <div class="row mt-2">
-              <section typeof="sa:Arhitecture">
-                  <div class="card text-bg-light mb-3">
-                      <div class="card-body">
-                          <h2 class="card-title">Frontend</h2>
-                          <h3 class="card-title">UI Mockup</h3>
-                          
-                          <div id="uiCarousel" class="carousel carousel-dark slide" data-ride="carousel">
-                          <ol class="carousel-indicators">
-                            <li data-target="#uiCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#uiCarousel" data-slide-to="1"></li>
-                            <li data-target="#uiCarousel" data-slide-to="2"></li>
-                            <li data-target="#uiCarousel" data-slide-to="3"></li>
-                            <li data-target="#uiCarousel" data-slide-to="4"></li>
-                            <li data-target="#uiCarousel" data-slide-to="5"></li>
-                          </ol>
-
-  
-                          <div class="carousel-inner">
-                            <div class="item active">
-                              <img src="landingPage.png" alt="Landing" style="width:100%;">
-                                 <div class="carousel-caption d-none d-md-block">
-                                  <h3>Home Page</h3>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                              <img src="loginPage.png" alt="Login" style="width:100%;">
-                                 <div class="carousel-caption d-none d-md-block">
-                                  <h3>Login Page</h3>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                              <img src="registerPage.png" alt="Register" style="width:100%;">
-                                 <div class="carousel-caption d-none d-md-block">
-                                  <h3>Register Page</h3>
-                                </div>
-                            </div>
-                              
-                               <div class="item">
-                              <img src="pastPage.png" alt="Past" style="width:100%;">
-                                    <div class="carousel-caption d-none d-md-block">
-                                  <h3>Recommendation from past purchases Page</h3>
-                                </div>
-                            </div>
-                              
-                               <div class="item">
-                              <img src="playlistPage.png" alt="Playlist" style="width:100%;">
-                                    <div class="carousel-caption d-none d-md-block">
-                                  <h3>Playlist Page</h3>
-                                </div>
-                            </div>
-                              
-                               <div class="item">
-                              <img src="profilePage.png" alt="Profile" style="width:100%;">
-                                    <div class="carousel-caption d-none d-md-block">
-                                  <h3>Profile Page</h3>
-                                </div>
-                            </div>
-                          </div>
-
-                          <!-- Left and right controls -->
-                          <a class="left carousel-control" href="#uiCarousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <span class="sr-only">Previous</span>
-                          </a>
-                          <a class="right carousel-control" href="#uiCarousel" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <span class="sr-only">Next</span>
-                          </a>
-                        </div>
-                      </div>
-                  </div>
-              </section>
           </div>
+        </section>
+      </div>
 
-            <div class="row mt-2">
-              <section typeof="sa:Arhitecture">
-                  <div class="card text-bg-light mb-3">
-                      <div class="card-body">
-                          <h2 class="card-title">Final Users</h2>
-                          <h3 class="card-title">User Description</h3>
-                          <p>An end user is a person who uses a product or service. This individual isn't necessarily the one who purchases a product but the one who ultimately uses it.
-                              For our application we have two main end users: </p>
-                          <ol>
-                              <li>A person that shows interest in music and wants to discover more and more music similar to his taste</li>
-                              <li>Developer that wants to integrate a music recommandation component in his application</li>
-                          <ol>
-                          <h3 class="card-title">Use Case Diagram</h3>
-                              <p>How the user will interact with the application:</p>
-                          <img class="img-fluid" src="./use-case.png" alt="Use case diagram">
-                      </div>
+      <!-- 2. Architecture of the Web application -->
+      <div class="row mt-2">
+        <section typeof="sa:Arhitecture">
+          <div class="card text-bg-light mb-3">
+            <div class="card-body">
+              <h2 class="card-title">2. Architecture of the Web application</h2>
+
+              <p>High Level Arhitecture from first draft to final version</p>
+
+              <div id="myCarousel" class="carousel carousel-dark slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="currentArh.png" alt="Current Arhitecture" style="width:100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Current Arhitecture Page</h3>
+                    </div>
                   </div>
-              </section>
+
+                  <div class="item">
+                    <img src="firstArh.png" alt="First Arhitecture" style="width:100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Draft Arhitecture Page</h3>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <h3 class="card-title">Main Backend Modules</h3>
+              <h3 class="card-title">Recommandation Module</h3>
+              <h3 class="card-title">User Module</h3>
+              <h3 class="card-title">Playlist Module</h3>
+            </div>
+        </section>
+      </div>
+
+      <!-- 3. Frontend Design -->
+      <div class="row mt-2">
+        <section typeof="sa:UiDesign">
+          <div class="card text-bg-light mb-3">
+            <div class="card-body">
+              <h2 class="card-title">3. Frontend Design</h2>
+              <h3 class="card-title">UI Mockup</h3>
+
+              <div id="uiCarousel" class="carousel carousel-dark slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#uiCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#uiCarousel" data-slide-to="1"></li>
+                  <li data-target="#uiCarousel" data-slide-to="2"></li>
+                  <li data-target="#uiCarousel" data-slide-to="3"></li>
+                  <li data-target="#uiCarousel" data-slide-to="4"></li>
+                  <li data-target="#uiCarousel" data-slide-to="5"></li>
+                </ol>
+
+
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="landingPage.png" alt="Landing" style="width:100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Home Page</h3>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="loginPage.png" alt="Login" style="width:100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Login Page</h3>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="registerPage.png" alt="Register" style="width:100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Register Page</h3>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="pastPage.png" alt="Past" style="width:100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Recommendation from past purchases Page</h3>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="playlistPage.png" alt="Playlist" style="width:100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Playlist Page</h3>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="profilePage.png" alt="Profile" style="width:100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Profile Page</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#uiCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#uiCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
           </div>
-      </article>
+        </section>
+      </div>
+
+      <!-- 4. Final Users -->
+      <div class="row mt-2">
+        <section typeof="sa:UseCase">
+          <div class="card text-bg-light mb-3">
+            <div class="card-body">
+              <h2 class="card-title">4. Final Users</h2>
+
+              <h3 class="card-title">User Description</h3>
+              <p>An end user is a person who uses a product or service. This individual isn't necessarily the one who
+                purchases a product but the one who ultimately uses it.
+                For our application we have two main end users: </p>
+              <ol>
+                <li>A person that shows interest in music and wants to discover more and more music similar to his taste
+                </li>
+                <li>Developer that wants to integrate a music recommandation component in his application</li>
+              </ol>
+
+              <h3 class="card-title">Use Case Diagram</h3>
+              <p>How the user will interact with the application:</p>
+
+              <img class="img-fluid" src="./use-case.png" alt="Use case diagram">
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 5. REST and GraphQL API for our services -->
+      <div class="row mt-2">
+        <section typeof="sa:OpenApi">
+          <div class="card text-bg-light mb-3">
+            <div class="card-body">
+              <h2 class="card-title">5. REST and GraphQL API for our services</h2>
+
+              <h3 class="card-title">User API</h3>
+              <p>link o the openAPI definition? </p>
+
+              <h3 class="card-title">Playlist API</h3>
+              <p>link o the openAPI definition? </p>
+
+              <h3 class="card-title">Recommandation API</h3>
+              <p>link o the openAPI definition? </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 6. External Data Sources -->
+      <div class="row mt-2">
+        <section typeof="sa:ExternalDataSource">
+          <div class="card text-bg-light mb-3">
+            <div class="card-body">
+              <h2 class="card-title">6. External Data Sources</h2>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 7. Ontology and Vocabularies -->
+      <div class="row mt-2">
+        <section typeof="sa:Vocabulary">
+          <div class="card text-bg-light mb-3">
+            <div class="card-body">
+              <h2 class="card-title">7. Ontology and Vocabularies</h2>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 8. Accessing RDF Graph data using SPARQL -->
+      <div class="row mt-2">
+        <section typeof="sa:RDF">
+          <div class="card text-bg-light mb-3">
+            <div class="card-body">
+              <h2 class="card-title">8. Accessing RDF Graph data using SPARQL</h2>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 9. Linked Data principles -->
+      <div class="row mt-2">
+        <section typeof="sa:LinkedDataPrinciples">
+          <div class="card text-bg-light mb-3">
+            <div class="card-body">
+              <h2 class="card-title">9. Linked Data Principles</h2>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 10. Bibliography -->
+      <div class="row mt-2">
+        <section typeof="sa:Bibliography">
+          <div class="card text-bg-light mb-3">
+            <div class="card-body">
+              <h2 class="card-title">10. Bibliography</h2>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
   </div>
 </body>
 
