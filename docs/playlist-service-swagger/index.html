@@ -204,6 +204,8 @@
   <ul>
   <li><a href="#deletePlaylist"><code><span class="http-method">delete</span> /playlist/{playlistId}</code></a></li>
   <li><a href="#getPlaylist"><code><span class="http-method">get</span> /playlist/{playlistId}</code></a></li>
+  <li><a href="#getPlaylistSongs"><code><span class="http-method">get</span> /playlist/{playlistId}/songs</code></a></li>
+  <li><a href="#getUserPlaylists"><code><span class="http-method">get</span> /playlist/ofUser/{userId}</code></a></li>
   <li><a href="#postPlaylist"><code><span class="http-method">post</span> /playlist</code></a></li>
   <li><a href="#updatePlaylist"><code><span class="http-method">put</span> /playlist/{playlistId}</code></a></li>
   </ul>
@@ -432,6 +434,110 @@
     <h4 class="field-label">200</h4>
     Playlist with given id retrieved
         <a href="#Playlist">Playlist</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getPlaylistSongs"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /playlist/{playlistId}/songs</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">getPlaylistSongs</span>)</div>
+    <div class="method-notes">returns songs of playlist specific id</div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">playlistId (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash;  </div>    </div>  <!-- field-items -->
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      array[<a href="#Song">Song</a>]
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>[ {
+  "author" : "author",
+  "name" : "name",
+  "id" : "0729a580-2240-11e6-9eb5-0002a5d5c51b",
+  "info" : ""
+}, {
+  "author" : "author",
+  "name" : "name",
+  "id" : "0729a580-2240-11e6-9eb5-0002a5d5c51b",
+  "info" : ""
+} ]</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    returns list of songs for playlist
+        
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getUserPlaylists"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /playlist/ofUser/{userId}</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">getUserPlaylists</span>)</div>
+    <div class="method-notes">returns playlists of user with specific id</div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">userId (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash;  </div>    </div>  <!-- field-items -->
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      array[<a href="#Playlist">Playlist</a>]
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>[ {
+  "name" : "name",
+  "id" : "0729a580-2240-11e6-9eb5-0002a5d5c51b",
+  "authorId" : "0729a580-2240-11e6-9eb5-0002a5d5c51b"
+}, {
+  "name" : "name",
+  "id" : "0729a580-2240-11e6-9eb5-0002a5d5c51b",
+  "authorId" : "0729a580-2240-11e6-9eb5-0002a5d5c51b"
+} ]</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    returns list of playlists of user
+        
   </div> <!-- method -->
   <hr/>
   <div class="method"><a name="postPlaylist"></a>
