@@ -252,6 +252,27 @@
           <div class="card text-bg-light mb-3">
             <div class="card-body">
               <h2 class="card-title">7. Ontology and Vocabularies</h2>
+              <p>We'll make use of the following ontology and vocabularies in order to model our business case. Some of them are needed for the Music Ontology that we use.</p>
+              <ul>
+                <li><b>PREFIX schema</b>: https://schema.org/ </li>
+                <li><b>PREFIX rdf</b>: http://www.w3.org/1999/02/22-rdf-syntax-ns# </li>
+                <li><b>PREFIX rdfs</b>: http://www.w3.org/2000/01/rdf-schema# </li>
+                <li><b>PREFIX xsd</b>: http://www.w3.org/2001/XMLSchema# </li>
+                <li><b>PREFIX mo</b>: http://purl.org/ontology/mo/ </li>
+                <li><b>PREFIX dc</b>: http://purl.org/dc/elements/1.1/</li>
+                <li><b>PREFIX tl</b>: http://purl.org/NET/c4dm/timeline.owl#</li>
+                <li><b>PREFIX event</b>: http://purl.org/NET/c4dm/event.owl#</li>
+                <li><b>PREFIX foaf</b>: http://xmlns.com/foaf/0.1/</li>
+              </ul>
+              <h3 class="card-title">Vinyl Resource graph</h3>
+              <ul>
+                <li><b>rdfs: subClassOf</b> defines a subclass of the class MusicRecording from schema.org</li>
+                <li><b>schema: byArtist</b> represent the artist that performed this album or recording</li>
+                <li><b>mo:Genre</b> an expressive style of music represented by any text or a reference to a DBPedia genre (such as http://dbpedia.org/resource/Baroque_music), allowing semantic web clients to access easily really detailed structured information about the genre you are refering to.</li>
+                <li><b>schema: member</b> Represents a member of the MusicGroup.</li>
+                <li><b>schema: givenName</b> Represetns the first name of a Person, more accurate of the artist</li>
+              </ul>
+              <img class="img-fluid" src="./vinyl-graph.png" alt="Vinyl Graph">
             </div>
           </div>
         </section>
