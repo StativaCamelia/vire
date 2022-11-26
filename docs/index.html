@@ -158,13 +158,13 @@
                         song_id int [ref: > vire.songs.id]
                       }
 
-                      Table vire.discogAccount {
+                      Table vire.discogToken {
                         id int [pk, increment]
                         email varchar
                         password varchar
                       }
 
-                      Table vire.lastFMAccount {
+                      Table vire.lastFMToken {
                         id int [pk, increment]
                         email varchar
                         password varchar
@@ -252,6 +252,19 @@
                   on our application with his account on<a src="https://www.discogs.com/">Discogs</a></p>
               </blockquote>
               <h5 class="card-title">Communication with external service: Discogs</h5>
+              <blockquote>
+                <p>In order to be able to use this recommandation option the user will need to associate the account in
+                  our application with his account on Discogs</p>
+                <p>In UI we will have a dedicated page for this. Once the client choose to connect his Discogs account
+                  with our application we will save his connection data in our database and everytime we requests data
+                  from this endpoint we will get the authentification token from Discogs and use it in order to obtain
+                  his past purchases</p>
+                <p>
+                  The Discogs API v2.0 is a RESTful interface to Discogs data. You can access JSON-formatted information
+                  about Database objects such as Artists, Releases, and Labels. Your application can also manage User
+                  Collections and Wantlists, create Marketplace Listings, and more.
+                </p>
+              </blockquote>
               <h4 class="card-title">Recommandation based on playlist</h4>
               <blockquote>
                 <p>Using the endpoint for this recommandation type the user will receive recommandation based on
@@ -272,11 +285,11 @@
                   <h5 class="card-title">Communication with external service: Last.fm</h5>
                 </li>
 
+
                 <li>
                   <h5 class="card-title">Communication with playlist service</h5>
                 </li>
               </ul>
-              <h4 class="card-title">Output</h4>
               <h4 class="card-title">OpenApi</h4>
 
 
