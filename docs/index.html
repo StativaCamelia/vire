@@ -284,7 +284,23 @@
                 <li>
                   <h5 class="card-title">Communication with external service: Last.fm</h5>
                 </li>
+                <blockquote>
+                  <p>In order to be able to use this recommandation option the user will need to associate the account
+                    in
+                    our application with his account on Last.fm</p>
+                  <p>In UI we will have a dedicated page for this. Once the client choose to connect his Discogs account
+                    with our application we will save his connection data in our database and everytime we requests data
+                    from this endpoint we will get the authentification token from Discogs and use it in order to obtain
+                    his playlists</p>
+                  <p>
+                    Use the playlist.fetch method call to fetch XSPF playlists. XSPF is a web standard for sharable
+                    playlists, and XSPF libraries are available in several languages. playlist.fetch takes a `lastfm'
+                    protocol URL as an argument; this identifies the playlist you're requesting. The following protocol
+                    url schema will be used:
 
+                    <b>User Playlists lastfm://playlist/playlist_id</b>
+                  </p>
+                </blockquote>
 
                 <li>
                   <h5 class="card-title">Communication with playlist service</h5>
