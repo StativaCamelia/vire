@@ -174,15 +174,37 @@
                 </pre>
               </div>
               <h3 class="card-title">Main Backend Modules</h3>
+              <h3 class="card-title">Vinyls Module (GraphQL endpoint)</h3>
+              <blockquote>
+                <p>
+                  This service will exponse only one endpoint. This endpoint will receive as an input a query and based
+                  on that will return a list of possible recommandation obtained by querying DBPedia
+                </p>
+                <p>
+                  The output for this endpoint will be the vinyl data resource.
+                </p>
+                <p>
+                  The arhitecture of the service is the following:
+                </p>
+                <div class="item">
+                  <img src="graphQL.PNG" alt="graphQL" style="width:100%;">
+                </div>
+              </blockquote>
+
               <h3 class="card-title">Recommandation Module</h3>
               <h4 class="card-title">Overview</h4>
               <blockquote>
                 <p>This service will be the one responsable for providing a number of vinyl recommandation, obtained
                   based
-                  on different criterias </p>
+                  on different criterias
+                </p>
                 <p>
                 <p>We will expose 3 endpoints for this service, the input format will differ, but it will be adapted so
-                  all of them will in the end get data from dbPedia
+                  all of them will in the end get data from dbPedia by calling the Vinyls GraphQL endpoint.
+                </p>
+                <p>
+                  This endpoint will act as an intermediary between the application frontend and the Vinyls Service that
+                  will return the actual recommandation.
                 </p>
               </blockquote>
               <p>
