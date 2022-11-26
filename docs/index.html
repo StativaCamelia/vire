@@ -183,18 +183,22 @@
                 <p>
                   The output for this endpoint will be the vinyl data resource.
                 </p>
+                <ul>
               </blockquote>
-              <p>
-                The arhitecture of the service is the following:
-              </p>
-              <div class="item">
-                <img src="graphQL.PNG" alt="graphQL" style="width:100%;">
-              </div>
-              <p>
-                Schema:
-              </p>
-              <div class="item">
-                <pre>
+              <li>
+                <p>
+                  The arhitecture of the service is the following:
+                </p>
+                <div class="item">
+                  <img src="graphQL.PNG" alt="graphQL" style="width:100%;">
+                </div>
+              </li>
+              <li>
+                <p>
+                  Schema:
+                </p>
+                <div class="item">
+                  <pre>
                       <code>
                         type Vinyl {
                           artist: String
@@ -206,9 +210,10 @@
                         }
                     </code>
                   </pre>
-              </div>
+                </div>
+              </li>
               </blockquote>
-
+              </ul>
               <h3 class="card-title">Recommandation Module</h3>
               <h4 class="card-title">Overview</h4>
               <blockquote>
@@ -217,11 +222,13 @@
                   on different criterias
                 </p>
                 <p>
-                <p>We will expose 3 endpoints for this service, the input format will differ, but it will be adapted so
+                <p>We will expose 3 endpoints for this service, the input format will differ, but it will be adapted
+                  so
                   all of them will in the end get data from dbPedia by calling the Vinyls GraphQL endpoint.
                 </p>
                 <p>
-                  This endpoint will act as an intermediary between the application frontend and the Vinyls Service that
+                  This endpoint will act as an intermediary between the application frontend and the Vinyls Service
+                  that
                   will return the actual recommandation.
                 </p>
               </blockquote>
@@ -253,14 +260,16 @@
               </blockquote>
               <h5 class="card-title">Communication with external service: Discogs</h5>
               <blockquote>
-                <p>In order to be able to use this recommandation option the user will need to associate the account in
+                <p>In order to be able to use this recommandation option the user will need to associate the account
+                  in
                   our application with his account on Discogs</p>
                 <p>In UI we will have a dedicated page for this. Once the client choose to connect his Discogs account
                   with our application we will save his connection data in our database and everytime we requests data
                   from this endpoint we will get the authentification token from Discogs and use it in order to obtain
                   his past purchases</p>
                 <p>
-                  The Discogs API v2.0 is a RESTful interface to Discogs data. You can access JSON-formatted information
+                  The Discogs API v2.0 is a RESTful interface to Discogs data. You can access JSON-formatted
+                  information
                   about Database objects such as Artists, Releases, and Labels. Your application can also manage User
                   Collections and Wantlists, create Marketplace Listings, and more.
                 </p>
@@ -271,11 +280,13 @@
                   playlists. The playlists can be either from <a src="https://www.last.fm/">Last.fm</a> or from a file
                   imported in pur application</p>
                 <ol>
-                  <li>Last.fm: In order to be able to receive the output for this endpoint the user will need to either
+                  <li>Last.fm: In order to be able to receive the output for this endpoint the user will need to
+                    either
                     associate the account on our application with his account on<a
                       src="https://www.last.fm/">Last.fm</a>
                   </li>
-                  <li>Imported playlist: In order to be able to receive the output for this endpoint the user will need
+                  <li>Imported playlist: In order to be able to receive the output for this endpoint the user will
+                    need
                     to
                     have an account in our application and to upload one or more playlists in it.</a></li>
                 </ol>
@@ -288,14 +299,18 @@
                   <p>In order to be able to use this recommandation option the user will need to associate the account
                     in
                     our application with his account on Last.fm</p>
-                  <p>In UI we will have a dedicated page for this. Once the client choose to connect his Discogs account
-                    with our application we will save his connection data in our database and everytime we requests data
-                    from this endpoint we will get the authentification token from Discogs and use it in order to obtain
+                  <p>In UI we will have a dedicated page for this. Once the client choose to connect his Discogs
+                    account
+                    with our application we will save his connection data in our database and everytime we requests
+                    data
+                    from this endpoint we will get the authentification token from Discogs and use it in order to
+                    obtain
                     his playlists</p>
                   <p>
                     Use the playlist.fetch method call to fetch XSPF playlists. XSPF is a web standard for sharable
                     playlists, and XSPF libraries are available in several languages. playlist.fetch takes a `lastfm'
-                    protocol URL as an argument; this identifies the playlist you're requesting. The following protocol
+                    protocol URL as an argument; this identifies the playlist you're requesting. The following
+                    protocol
                     url schema will be used:
 
                     <b>User Playlists lastfm://playlist/playlist_id</b>
