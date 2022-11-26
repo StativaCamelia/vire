@@ -114,12 +114,12 @@
               </div>
               <h3 class="card-title">Database arhitecture</h3>
 
-                <div class="item">
-                  <img src="db.PNG" alt="database" style="width:100%;">
-                </div>
+              <div class="item">
+                <img src="db.PNG" alt="database" style="width:100%;">
+              </div>
 
-                <div class="item">
-                  <pre>
+              <div class="item">
+                <pre>
                     <code>
 
                       Table vire.users {
@@ -158,58 +158,81 @@
                         song_id int [ref: > vire.songs.id]
                       }
 
+                      Table vire.discogAccount {
+                        id int [pk, increment]
+                        email varchar
+                        password varchar
+                      }
+
+                      Table vire.lastFMAccount {
+                        id int [pk, increment]
+                        email varchar
+                        password varchar
+                      }
+
                   </code>
                 </pre>
               </div>
               <h3 class="card-title">Main Backend Modules</h3>
               <h3 class="card-title">Recommandation Module</h3>
               <h4 class="card-title">Overview</h4>
-                <p>
-                  The arhitecture of the service is the following:
-                </p>
-                <div class="item">
-                  <img src="recommandationArhitecture.PNG" alt="userService" style="width:100%;">
-                </div>
-              
+              <p>
+                The arhitecture of the service is the following:
+              </p>
+              <div class="item">
+                <img src="recommandationArhitecture.PNG" alt="userService" style="width:100%;">
+              </div>
+
               <h4 class="card-title">Recommandation based on user input</h4>
+              <p>Using the endpoint for this recommandation type the user will receive recommandation based on an input submited by him</p>
+              <p>The input needs to be valid in the controlled natural language defined by us</p>
+              
               <h5 class="card-title">Controlled Natural Language</h5>
               <h4 class="card-title">Recommandation based on past purchases</h4>
+                <p>Using the endpoint for this recommandation type the user will receive recommandation based on past purchases done on Discogs</p>
+                <p>In order to be able to receive the output for this endpoint the user will need to associate the account on our application with his account on<a src="https://www.discogs.com/">Discogs</a></p>
               <h5 class="card-title">Communication with external service: Discogs</h5>
               <h4 class="card-title">Recommandation based on playlist</h4>
+              <p>Using the endpoint for this recommandation type the user will receive recommandation based on playlists. The playlists can be either from <a src="https://www.last.fm/">Last.fm</a> or from a file imported in pur application</p>
+              <ol>
+                <li>Last.fm: In order to be able to receive the output for this endpoint the user will need to either associate the account on our application with his account on<a src="https://www.last.fm/">Last.fm</a></li>
+                <li>Imported playlist: In order to be able to receive the output for this endpoint the user will need to have an account in our application and to upload one or more playlists in it.</a></li>
+              </ol>
               <h5 class="card-title">Communication with external service: Last.fm</h5>
+
               <h5 class="card-title">Communication with playlist service</h5>
               <h4 class="card-title">Output</h4>
               <h4 class="card-title">OpenApi</h4>
-              
+
 
               <h3 class="card-title">User Module</h3>
 
-            <p>
-              This module role is to maintain the functionality needed for users like login, register etc.
-            </p>
-            <p>
-              The arhitecture of the service is the following:
-            </p>
-            <div class="item">
-              <img src="arhUserService.PNG" alt="userService" style="width:100%;">
-            </div>
-            <p>  
-              Open API: <a href="./user-service-swagger/index.html">Here</a>
-            </p>
+              <p>
+                This module role is to maintain the functionality needed for users like login, register etc.
+              </p>
+              <p>
+                The arhitecture of the service is the following:
+              </p>
+              <div class="item">
+                <img src="arhUserService.PNG" alt="userService" style="width:100%;">
+              </div>
+              <p>
+                Open API: <a href="./user-service-swagger/index.html">Here</a>
+              </p>
 
-            <h3 class="card-title">Playlist Module</h3>
-            <p>
-              This module role is to maintain the functionality needed for playlists like create, edit etc.
-            </p>
-            <p>
-              The arhitecture of the service is the following:
-            </p>
-            <div class="item">
-              <img src="arhPlaylistService.PNG" alt="playlistService" style="width:100%;">
-            </div>
-            <p>
-              Open API: <a href="./playlist-service-swagger/index.html">Here</a>
-            </p>
+              <h3 class="card-title">Playlist Module</h3>
+              <p>
+                This module role is to maintain the functionality needed for playlists like create, edit etc.
+              </p>
+              <p>
+                The arhitecture of the service is the following:
+              </p>
+              <div class="item">
+                <img src="arhPlaylistService.PNG" alt="playlistService" style="width:100%;">
+              </div>
+              <p>
+                Open API: <a href="./playlist-service-swagger/index.html">Here</a>
+              </p>
             </div>
         </section>
       </div>
@@ -367,7 +390,8 @@
                 </p>
                 <p>
                   Also, we will suggest some vinyls to the user based on the playlists he owns on different platforms
-                  We chose to get this information from the music streaming service <b><a href="https://www.last.fm/api/playlists">Last.fm Playlists</a></b>.
+                  We chose to get this information from the music streaming service <b><a
+                      href="https://www.last.fm/api/playlists">Last.fm Playlists</a></b>.
                 </p>
               </blockquote>
             </div>
